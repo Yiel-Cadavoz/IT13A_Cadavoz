@@ -18,7 +18,8 @@ public class Lab_Act1_Arithmetics {
         int fourthoperation= firstnumber * thirdnumber - (secondnumber * secondnumber);
         
         System.out.println("10 * 4 + 6 = " + firstoperation);
-        System.out.println("10 - 4 % 6 =" + secondoperation);
-        System.out.println();
+        System.out.println("10 - 4 % 6 = " + secondoperation);
+        System.out.println("10 + 4 + 6 / 3 = " + thirdoperation);
+        System.out.println("10 x 6 - 4 x 4 = " + fourthoperation);
    }
 }
