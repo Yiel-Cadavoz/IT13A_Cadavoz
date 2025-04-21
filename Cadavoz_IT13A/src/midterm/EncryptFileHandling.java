@@ -39,7 +39,7 @@ public class EncryptFileHandling {
         String encryptedMessage = encryptMessage(secretMessage);
 
         try (FileWriter fileWriter = new FileWriter(FILE_NAME, true)){// We must use try-catch here to handle issues and avoid crashing the whole program if file writing fails.
-            fileWriter.write(encryptedMessage);
+            fileWriter.write(encryptedMessage + "\n");
             System.out.println("Secret message successfully saved!");
         } catch (IOException e){
             System.out.println("Error saving the message. Please try again.");
@@ -53,6 +53,7 @@ public class EncryptFileHandling {
             if (Character.isLetter(c)){// the encryption only works on letters
                 char shifted = (char) (c + SHIFT);
                 encrypted.append(shifted);
+                        
             } else {// if the password is a number, it stays the same. 
                 encrypted.append(c);// append adds one letter at a time
             }
